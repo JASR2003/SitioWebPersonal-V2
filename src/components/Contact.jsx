@@ -5,28 +5,28 @@ export function Contact() {
         {
             name: 'GitHub',
             icon: <Github className="w-8 h-8" />,
-            url: 'https://github.com/jorgesuarez',
+            url: 'https://github.com/JASR2003',
             color: 'hover:bg-gray-900 dark:hover:bg-white',
             textColor: 'hover:text-white dark:hover:text-gray-900'
         },
         {
             name: 'LinkedIn',
             icon: <Linkedin className="w-8 h-8" />,
-            url: 'https://linkedin.com/in/jorgesuarez',
+            url: 'https://www.linkedin.com/in/jorge-alejandro-suarez-rivera/',
             color: 'hover:bg-[#0077B5]',
             textColor: 'hover:text-white'
         },
         {
             name: 'Instagram',
             icon: <Instagram className="w-8 h-8" />,
-            url: 'https://instagram.com/jorgesuarez',
+            url: 'https://www.instagram.com/jasr0807/',
             color: 'hover:bg-gradient-to-br hover:from-[#FF6A3D] hover:via-[#FF3D4E] hover:to-[#8B4DFF]',
             textColor: 'hover:text-white'
         },
         {
             name: 'Twitter',
             icon: <Twitter className="w-8 h-8" />,
-            url: 'https://twitter.com/jorgesuarez',
+            url: 'https://x.com/JorgeSuarezDev',
             color: 'hover:bg-[#1DA1F2]',
             textColor: 'hover:text-white'
         }
