@@ -33,6 +33,12 @@ export function Skills() {
             description: 'Utility-first CSS'
         },
         {
+            icon: <GitBranch className="w-8 h-8 md:w-10 md:h-10" />,
+            name: 'Git',
+            level: 'Intermedio',
+            description: 'Control de versiones'
+        },
+        {
             icon: <Code2 className="w-8 h-8 md:w-10 md:h-10" />,
             name: 'WordPress',
             level: 'Avanzado',
@@ -43,12 +49,6 @@ export function Skills() {
             name: 'Elementor',
             level: 'Avanzado',
             description: 'Page builder profesional'
-        },
-        {
-            icon: <GitBranch className="w-8 h-8 md:w-10 md:h-10" />,
-            name: 'Git',
-            level: 'Intermedio',
-            description: 'Control de versiones'
         },
         {
             icon: <Database className="w-8 h-8 md:w-10 md:h-10" />,
