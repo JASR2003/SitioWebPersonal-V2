@@ -1,4 +1,5 @@
 import { ArrowRight, Download } from 'lucide-react';
+import profilePic from '../assets/JorgeSuarez.jpg';
 
 export function Hero() {
     const scrollToProjects = () => {
@@ -20,16 +21,16 @@ export function Hero() {
             <div className="container mx-auto max-w-6xl">
                 <div className="flex flex-col items-center text-center">
                     {/* Avatar/Circle */}
-                    <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full bg-gradient-to-br from-[#FF6A3D] via-[#FF3D4E] via-[#8B4DFF] to-[#296BFF] p-1 mb-8">
+                    <div className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full bg-gradient-to-br from-[#FF6A3D] via-[#FF3D4E] via-[#8B4DFF] to-[#296BFF] p-1 mb-8">
                         <img
-                            src="/profile.jpg"
+                            src={profilePic}
                             alt="Jorge Suárez"
                             className="w-full h-full rounded-full object-cover bg-[#0A1A3A]"
                         />
                     </div>
 
                     {/* Title */}
-                    <h1 className="mb-6 text-white">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
                         Jorge Suárez – Desarrollador Frontend y WordPress
                     </h1>
 

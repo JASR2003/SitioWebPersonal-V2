@@ -86,7 +86,7 @@ export function Skills() {
         <section id="conocimientos" className="py-16 md:py-24 px-6 bg-[#0D1F45] transition-colors duration-300">
             <div className="container mx-auto max-w-6xl">
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="mb-4 text-white">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5 text-white">
                         Conocimientos
                     </h2>
                     <p className="text-gray-300 max-w-2xl mx-auto">
@@ -104,7 +104,7 @@ export function Skills() {
                                 {skill.icon}
                             </div>
 
-                            <h3 className="mb-2 text-white">
+                            <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-white">
                                 {skill.name}
                             </h3>
 
