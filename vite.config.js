@@ -5,5 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: 'https://jasr2003.github.io/SitioWebPersonal-V2/'
+  base: '/SitioWebPersonal-V2/'
 })
