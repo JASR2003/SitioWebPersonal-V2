@@ -4,6 +4,7 @@ import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Education } from './components/Education';
+import { Contact } from './components/Contact';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Experience />
         <Projects />
         <Education />
+        <Contact />
       </main>
 
       <footer className="bg-[#0D1F45] py-8 border-t border-gray-700/30">
