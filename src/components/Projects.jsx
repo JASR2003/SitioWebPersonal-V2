@@ -68,10 +68,10 @@ export function Projects() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="group rounded-2xl bg-[#0A1A3A] border border-gray-700/30 overflow-hidden hover:border-[#296BFF] hover:shadow-lg hover:shadow-[#296BFF]/10 transition-all duration-300"
+                            className="group rounded-2xl bg-[#0A1A3A] border border-gray-700/30 overflow-hidden hover:border-[#296BFF] hover:shadow-lg hover:shadow-[#296BFF]/10 transition-all duration-300 flex flex-col h-full"
                         >
                             {/* Image */}
-                            <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF]">
+                            <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF] shrink-0">
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -80,17 +80,17 @@ export function Projects() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-6">
+                            <div className="p-6 flex flex-col flex-1">
                                 <h3 className="text-white font-semibold text-lg md:text-xl lg:text-2xl mb-3 text-center">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-sm text-gray-400 mb-4 text-justify">
+                                <p className="text-sm text-gray-400 mb-4 text-justify flex-1">
                                     {project.description}
                                 </p>
 
                                 {/* Technologies */}
-                                <div className="flex flex-wrap gap-2 mb-4">
+                                <div className="flex flex-wrap gap-2 mb-6">
                                     {project.technologies.map((tech, i) => (
                                         <span
                                             key={i}
@@ -102,7 +102,7 @@ export function Projects() {
                                 </div>
 
                                 {/* Buttons */}
-                                <div className="flex gap-3">
+                                <div className="flex gap-3 mt-auto">
                                     <a
                                         href={project.demoUrl}
                                         className="flex-1 px-4 py-2 rounded-lg bg-gradient-to-r from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF] text-white text-sm text-center hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2"
