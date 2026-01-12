@@ -3,6 +3,7 @@ import { Hero } from './components/Hero';
 import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
+import { Education } from './components/Education';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Skills />
         <Experience />
         <Projects />
+        <Education />
       </main>
 
       <footer className="bg-[#0D1F45] py-8 border-t border-gray-700/30">
