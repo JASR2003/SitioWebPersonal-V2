@@ -2,6 +2,7 @@ import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
+import { Projects } from './components/Projects';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <Skills />
         <Experience />
+        <Projects />
       </main>
 
       <footer className="bg-[#0D1F45] py-8 border-t border-gray-700/30">
