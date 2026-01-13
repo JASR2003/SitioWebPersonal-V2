@@ -16,29 +16,131 @@ export function Education() {
 
     const certificates = [
         {
-            title: 'React - Guía Completa',
-            issuer: 'Udemy',
-            year: '2023',
-            image: '/certificates/react-certificate.jpg'
-        },
-        {
-            title: 'CSS y Sass Avanzado',
-            issuer: 'Udemy',
-            year: '2023',
-            image: '/certificates/css-certificate.jpg'
-        },
-        {
-            title: 'Algoritmos con JavaScript',
-            issuer: 'freeCodeCamp',
+            title: 'Curso Básico de JavaScript',
+            issuer: 'Platzi',
             year: '2022',
-            image: '/certificates/js-certificate.jpg'
+            image: new URL('../assets/certificados/diploma-basico-javascript-1.png', import.meta.url).href
         },
         {
-            title: 'Diseño Web Responsivo',
-            issuer: 'freeCodeCamp',
+            title: 'Curso de Bootstrap',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-bootstrap-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de CSS Grid Básico',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-css-grid-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Profesional de CSS Grid Layout',
+            issuer: 'Platzi',
             year: '2022',
-            image: '/certificates/responsive-certificate.jpg'
-        }
+            image: new URL('../assets/certificados/diploma-css-grid-layout-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Diseño Para Programadores',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-diseno-programadores.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Ecmascript: Historia y Versiones de JavaScript',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-ecmascript-6-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Diseño Web con CSS Grid y Flexbox',
+            issuer: 'Platzi',
+            year: '2022',
+            image: new URL('../assets/certificados/diploma-flexbox-css-grid-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Frontend Developer',
+            issuer: 'Platzi',
+            year: '2021',
+            image: new URL('../assets/certificados/diploma-frontend-developer-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Práctico de Frontend Developer',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-frontend-developer-practico-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Definitivo de HTML y CSS',
+            issuer: 'Platzi',
+            year: '2021',
+            image: new URL('../assets/certificados/diploma-html-css-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Práctico de HTML y CSS',
+            issuer: 'Platzi',
+            year: '2021',
+            image: new URL('../assets/certificados/diploma-html-practico-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Closures y Scope en JavaScript',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-javascript-closures-scope-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de JavaScript Desde Cero',
+            issuer: 'Platzi',
+            year: '2024',
+            image: new URL('../assets/certificados/diploma-javascript-fundamentos.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Práctico de JavaScript',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-javascript-practico-1.png', import.meta.url).href
+        },
+        {
+            title: 'Taller Práctico de JavaScript ¡Crea tu Primer Videojuego!',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-javascript-practico-videojuegos.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Responsive Design: Maquetación Mobile First',
+            issuer: 'Platzi',
+            year: '2022',
+            image: new URL('../assets/certificados/diploma-mobile-first-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Práctico de Maquetación en CSS',
+            issuer: 'Platzi',
+            year: '2022',
+            image: new URL('../assets/certificados/diploma-practico-css-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Básico de Tailwind CSS',
+            issuer: 'Platzi',
+            year: '2024',
+            image: new URL('../assets/certificados/diploma-tailwind-2-3.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Tailwind CSS',
+            issuer: 'Platzi',
+            year: '2024',
+            image: new URL('../assets/certificados/diploma-tailwind-css-2020-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Transformaciones y Transiciones en CSS',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-transformaciones-transiciones-css.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Creación de Páginas Web con WordPress y No-Code',
+            issuer: 'Platzi',
+            year: '2024',
+            image: new URL('../assets/certificados/Paginas-web-Wordpress-Nocode.png', import.meta.url).href
+        },
     ];
 
     const nextCertificate = () => {
