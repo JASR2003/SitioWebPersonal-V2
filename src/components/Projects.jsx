@@ -4,7 +4,7 @@ export function Projects() {
     const projects = [
         {
             title: 'Asdrúbal Suárez | Senior Backend Engineer',
-            description: 'Presento una carta Pokémon utilizando la PokeAPI. Al cargar la página, una función elige un número aleatorio y muestra los valores del Pokémon correspondiente.',
+            description: 'Sitio web profesional diseñado para un Senior Backend Engineer. Un portafolio moderno y minimalista que destaca su trayectoria, experiencia técnica y proyectos de alto impacto.',
 
             technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
             demoUrl: 'https://asdrubalivan.com/'
