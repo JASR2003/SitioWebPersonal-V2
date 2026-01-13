@@ -66,7 +66,7 @@ export function Experience() {
                             <div className="p-6 lg:p-8 rounded-2xl bg-[#0D1F45] border border-gray-700/30 lg:hover:border-[#296BFF] lg:hover:shadow-lg lg:hover:shadow-[#296BFF]/10 h-full transition-all duration-300">
                                 {/* Header: Icon + Info */}
                                 <div className="flex flex-row lg:flex-col lg:items-start gap-4 lg:gap-0 mb-4 lg:mb-2">
-                                    <div className="p-2 lg:p-3 w-fit rounded-lg bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF] lg:mb-6 shrink-0">
+                                    <div className="p-2 lg:p-3 w-fit h-fit aspect-square rounded-lg bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF] lg:mb-6 shrink-0">
                                         <Briefcase className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                                     </div>
 

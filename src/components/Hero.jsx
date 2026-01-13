@@ -21,7 +21,7 @@ export function Hero() {
             <div className="container mx-auto max-w-6xl">
                 <div className="flex flex-col items-center text-center">
                     {/* Avatar/Circle */}
-                    <div className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full bg-gradient-to-br from-[#FF6A3D] via-[#FF3D4E] via-[#8B4DFF] to-[#296BFF] p-1 mb-8">
+                    <div className="w-38 h-38 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full bg-gradient-to-br from-[#FF6A3D] via-[#FF3D4E] via-[#8B4DFF] to-[#296BFF] p-1 mb-8">
                         <img
                             src={profilePic}
                             alt="Jorge Suárez"
@@ -30,7 +30,7 @@ export function Hero() {
                     </div>
 
                     {/* Title */}
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+                    <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-6 text-white">
                         Jorge Suárez – Desarrollador Frontend y WordPress
                     </h1>
 
