@@ -44,19 +44,6 @@ export function Contact() {
                     </p>
                 </div>
 
-                {/* Location */}
-                <div className="flex justify-center mb-12">
-                    <div className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-[#0A1A3A] border border-gray-700/30">
-                        <div className="p-3 rounded-lg bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF]">
-                            <MapPin className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="text-left">
-                            <p className="text-sm text-gray-400">Ubicación</p>
-                            <p className="text-white">Venezuela</p>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Social Links */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     {socialLinks.map((social, index) => (
@@ -78,6 +65,19 @@ export function Contact() {
                     <p className="text-gray-400">
                         ¿Tienes un proyecto en mente? ¡Escríbeme por cualquiera de estas plataformas!
                     </p>
+                </div>
+
+                {/* Location */}
+                <div className="flex justify-center mb-12">
+                    <div className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-[#0A1A3A] border border-gray-700/30">
+                        <div className="p-3 rounded-lg bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF]">
+                            <MapPin className="w-6 h-6 text-white" />
+                        </div>
+                        <div className="text-left">
+                            <p className="text-sm text-gray-400">Ubicación</p>
+                            <p className="text-white">Venezuela</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
