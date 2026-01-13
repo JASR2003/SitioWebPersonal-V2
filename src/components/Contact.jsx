@@ -61,14 +61,14 @@ export function Contact() {
                 </div>
 
                 {/* Additional Message */}
-                <div className="text-center mt-12">
+                <div className="text-center my-12">
                     <p className="text-gray-400">
                         ¿Tienes un proyecto en mente? ¡Escríbeme por cualquiera de estas plataformas!
                     </p>
                 </div>
 
                 {/* Location */}
-                <div className="flex justify-center mx-12">
+                <div className="flex justify-center mb-12">
                     <div className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-[#0A1A3A] border border-gray-700/30">
                         <div className="p-3 rounded-lg bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF]">
                             <MapPin className="w-6 h-6 text-white" />
