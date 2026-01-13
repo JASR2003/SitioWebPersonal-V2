@@ -3,53 +3,33 @@ import { ExternalLink, Github } from 'lucide-react';
 export function Projects() {
     const projects = [
         {
-            title: 'Plataforma E-commerce',
-            description: 'Plataforma de comercio electrónico completa con carrito, pasarela de pago y panel de administración.',
-            image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
-            technologies: ['React', 'TypeScript', 'Tailwind', 'Stripe'],
-            demoUrl: '#',
-            githubUrl: '#'
+            title: 'Asdrúbal Suárez | Senior Backend Engineer',
+            description: 'Presento una carta Pokémon utilizando la PokeAPI. Al cargar la página, una función elige un número aleatorio y muestra los valores del Pokémon correspondiente.',
+
+            technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
+            demoUrl: 'https://asdrubalivan.com/'
         },
         {
-            title: 'Dashboard de Analíticas',
-            description: 'Dashboard interactivo con visualización de datos en tiempo real y reportes personalizables.',
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-            technologies: ['React', 'Chart.js', 'API REST', 'CSS'],
-            demoUrl: '#',
-            githubUrl: '#'
+            title: 'pokedex api',
+            description: 'Presento una carta Pokémon utilizando la PokeAPI. Al cargar la página, una función elige un número aleatorio y muestra los valores del Pokémon correspondiente.',
+
+            technologies: ['HTML', 'CSS', 'JavaScript', 'API'],
+            demoUrl: 'https://jasr2003.github.io/pokedex-card/'
         },
         {
-            title: 'Portafolio Creativo',
-            description: 'Sitio web portafolio para agencia creativa con animaciones y diseño moderno.',
-            image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80',
-            technologies: ['React', 'Motion', 'Tailwind'],
-            demoUrl: '#',
-            githubUrl: '#'
+            title: 'Calculadora',
+            description: 'Desarrollé una calculadora basada en un tutorial, con las cuatro operaciones básicas. Además, agregué la opción de cambiar el color de la misma.',
+
+            technologies: ['HTML', 'CSS', 'JavaScript'],
+            demoUrl: 'https://jorgesuarez-calculadora.netlify.app/'
         },
         {
-            title: 'Gestor de Tareas',
-            description: 'Aplicación de gestión de tareas con arrastrar y soltar, etiquetas y sistema de notificaciones.',
-            image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80',
-            technologies: ['React', 'DnD', 'LocalStorage', 'CSS', 'Tailwind'],
-            demoUrl: '#',
-            githubUrl: '#'
+            title: 'Piedra,Papel,Tijera',
+            description: 'El clásico Piedra Papel o Tijera de toda la vida, Intenta ganarle a la máquina, es al mejor de 5.',
+
+            technologies: ['HTML', 'CSS', 'JavaScript'],
+            demoUrl: 'https://jorgesuarez-piedra-papel-tijera.netlify.app/'
         },
-        {
-            title: 'App del Clima',
-            description: 'Aplicación del clima con pronósticos de 7 días, geolocalización y mapas interactivos.',
-            image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80',
-            technologies: ['React', 'OpenWeather API', 'Mapbox'],
-            demoUrl: '#',
-            githubUrl: '#'
-        },
-        {
-            title: 'Panel de Redes Sociales',
-            description: 'Panel para gestión de redes sociales con programación de publicaciones y analíticas.',
-            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
-            technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
-            demoUrl: '#',
-            githubUrl: '#'
-        }
     ];
 
     return (
@@ -70,18 +50,11 @@ export function Projects() {
                             key={index}
                             className="group rounded-2xl bg-[#0A1A3A] border border-gray-700/30 overflow-hidden hover:border-[#296BFF] hover:shadow-lg hover:shadow-[#296BFF]/10 transition-all duration-300 flex flex-col h-full"
                         >
-                            {/* Image */}
-                            <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF] shrink-0">
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                                />
-                            </div>
+
 
                             {/* Content */}
                             <div className="p-6 flex flex-col flex-1">
-                                <h3 className="text-white font-semibold text-lg md:text-xl lg:text-2xl mb-3 text-center">
+                                <h3 className="text-white uppercase font-bold text-lg md:text-xl lg:text-2xl mb-3 text-center">
                                     {project.title}
                                 </h3>
 
@@ -109,14 +82,6 @@ export function Projects() {
                                     >
                                         <ExternalLink className="w-4 h-4" />
                                         Ver sitio
-                                    </a>
-
-                                    <a
-                                        href={project.githubUrl}
-                                        className="flex-1 px-4 py-2 rounded-lg border border-[#296BFF] text-[#296BFF] text-sm text-center hover:bg-[#152847] transition-all duration-300 flex items-center justify-center gap-2"
-                                    >
-                                        <Github className="w-4 h-4" />
-                                        GitHub
                                     </a>
                                 </div>
                             </div>
