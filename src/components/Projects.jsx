@@ -3,14 +3,14 @@ import { ExternalLink, Github } from 'lucide-react';
 export function Projects() {
     const projects = [
         {
-            title: 'Asdrúbal Suárez | Senior Backend Engineer',
+            title: 'Asdrúbal Suárez - Senior Backend Engineer',
             description: 'Sitio web profesional diseñado para un Senior Backend Engineer. Un portafolio moderno y minimalista que destaca su trayectoria, experiencia técnica y proyectos de alto impacto.',
 
             technologies: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS'],
             demoUrl: 'https://asdrubalivan.com/'
         },
         {
-            title: 'Jorge Suárez |Desarollador web | FrontEnd Developer',
+            title: 'Jorge Suárez - Desarollador web - FrontEnd Developer',
             description: 'Versión anterior de mi portafolio personal. Diseñado para presentar mis proyectos iniciales y experiencia como desarrollador Frontend.',
 
             technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
