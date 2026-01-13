@@ -16,58 +16,10 @@ export function Education() {
 
     const certificates = [
         {
-            title: 'Curso Básico de JavaScript',
-            issuer: 'Platzi',
-            year: '2022',
-            image: new URL('../assets/certificados/diploma-basico-javascript-1.png', import.meta.url).href
-        },
-        {
-            title: 'Curso de Bootstrap',
-            issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-bootstrap-1.png', import.meta.url).href
-        },
-        {
-            title: 'Curso de CSS Grid Básico',
-            issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-css-grid-1.png', import.meta.url).href
-        },
-        {
-            title: 'Curso Profesional de CSS Grid Layout',
-            issuer: 'Platzi',
-            year: '2022',
-            image: new URL('../assets/certificados/diploma-css-grid-layout-1.png', import.meta.url).href
-        },
-        {
-            title: 'Curso de Diseño Para Programadores',
-            issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-diseno-programadores.png', import.meta.url).href
-        },
-        {
-            title: 'Curso de Ecmascript: Historia y Versiones de JavaScript',
-            issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-ecmascript-6-1.png', import.meta.url).href
-        },
-        {
-            title: 'Curso de Diseño Web con CSS Grid y Flexbox',
-            issuer: 'Platzi',
-            year: '2022',
-            image: new URL('../assets/certificados/diploma-flexbox-css-grid-1.png', import.meta.url).href
-        },
-        {
             title: 'Curso de Frontend Developer',
             issuer: 'Platzi',
             year: '2021',
             image: new URL('../assets/certificados/diploma-frontend-developer-1.png', import.meta.url).href
-        },
-        {
-            title: 'Curso Práctico de Frontend Developer',
-            issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-frontend-developer-practico-1.png', import.meta.url).href
         },
         {
             title: 'Curso Definitivo de HTML y CSS',
@@ -82,28 +34,22 @@ export function Education() {
             image: new URL('../assets/certificados/diploma-html-practico-1.png', import.meta.url).href
         },
         {
-            title: 'Curso de Closures y Scope en JavaScript',
+            title: 'Curso Básico de JavaScript',
             issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-javascript-closures-scope-1.png', import.meta.url).href
+            year: '2022',
+            image: new URL('../assets/certificados/diploma-basico-javascript-1.png', import.meta.url).href
         },
         {
-            title: 'Curso de JavaScript Desde Cero',
+            title: 'Curso Profesional de CSS Grid Layout',
             issuer: 'Platzi',
-            year: '2024',
-            image: new URL('../assets/certificados/diploma-javascript-fundamentos.png', import.meta.url).href
+            year: '2022',
+            image: new URL('../assets/certificados/diploma-css-grid-layout-1.png', import.meta.url).href
         },
         {
-            title: 'Curso Práctico de JavaScript',
+            title: 'Curso de Diseño Web con CSS Grid y Flexbox',
             issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-javascript-practico-1.png', import.meta.url).href
-        },
-        {
-            title: 'Taller Práctico de JavaScript ¡Crea tu Primer Videojuego!',
-            issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-javascript-practico-videojuegos.png', import.meta.url).href
+            year: '2022',
+            image: new URL('../assets/certificados/diploma-flexbox-css-grid-1.png', import.meta.url).href
         },
         {
             title: 'Curso de Responsive Design: Maquetación Mobile First',
@@ -118,6 +64,66 @@ export function Education() {
             image: new URL('../assets/certificados/diploma-practico-css-1.png', import.meta.url).href
         },
         {
+            title: 'Curso de Bootstrap',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-bootstrap-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de CSS Grid Básico',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-css-grid-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Diseño Para Programadores',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-diseno-programadores.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Ecmascript: Historia y Versiones de JavaScript',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-ecmascript-6-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Práctico de Frontend Developer',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-frontend-developer-practico-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Closures y Scope en JavaScript',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-javascript-closures-scope-1.png', import.meta.url).href
+        },
+        {
+            title: 'Curso Práctico de JavaScript',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-javascript-practico-1.png', import.meta.url).href
+        },
+        {
+            title: 'Taller Práctico de JavaScript ¡Crea tu Primer Videojuego!',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-javascript-practico-videojuegos.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de Transformaciones y Transiciones en CSS',
+            issuer: 'Platzi',
+            year: '2023',
+            image: new URL('../assets/certificados/diploma-transformaciones-transiciones-css.png', import.meta.url).href
+        },
+        {
+            title: 'Curso de JavaScript Desde Cero',
+            issuer: 'Platzi',
+            year: '2024',
+            image: new URL('../assets/certificados/diploma-javascript-fundamentos.png', import.meta.url).href
+        },
+        {
             title: 'Curso Básico de Tailwind CSS',
             issuer: 'Platzi',
             year: '2024',
@@ -128,12 +134,6 @@ export function Education() {
             issuer: 'Platzi',
             year: '2024',
             image: new URL('../assets/certificados/diploma-tailwind-css-2020-1.png', import.meta.url).href
-        },
-        {
-            title: 'Curso de Transformaciones y Transiciones en CSS',
-            issuer: 'Platzi',
-            year: '2023',
-            image: new URL('../assets/certificados/diploma-transformaciones-transiciones-css.png', import.meta.url).href
         },
         {
             title: 'Curso de Creación de Páginas Web con WordPress y No-Code',
@@ -213,7 +213,7 @@ export function Education() {
 
                     <div className="relative max-w-4xl mx-auto px-8 sm:px-12 md:px-16 lg:px-20">
                         {/* Certificate Display */}
-                        <div className="relative aspect-[16/11] rounded-2xl overflow-hidden bg-[#0D1F45] border border-gray-700/30">
+                        <div className="relative aspect-[16/12] rounded-2xl overflow-hidden bg-[#0D1F45] border border-gray-700/30">
                             <img
                                 src={certificates[currentCertificate].image}
                                 alt={certificates[currentCertificate].title}
