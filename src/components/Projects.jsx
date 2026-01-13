@@ -78,6 +78,7 @@ export function Projects() {
                                 <div className="flex gap-3 mt-auto">
                                     <a
                                         href={project.demoUrl}
+                                        target='_blank'
                                         className="flex-1 px-4 py-2 rounded-lg bg-gradient-to-r from-[#FF6A3D] via-[#8B4DFF] to-[#296BFF] text-white text-sm text-center hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2"
                                     >
                                         <ExternalLink className="w-4 h-4" />
