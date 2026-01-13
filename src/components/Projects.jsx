@@ -10,6 +10,13 @@ export function Projects() {
             demoUrl: 'https://asdrubalivan.com/'
         },
         {
+            title: 'Jorge Suárez |Desarollador web | FrontEnd Developer',
+            description: 'Versión anterior de mi portafolio personal. Diseñado para presentar mis proyectos iniciales y experiencia como desarrollador Frontend.',
+
+            technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+            demoUrl: 'https://jorgesuarez-first-v.netlify.app/'
+        },
+        {
             title: 'pokedex api',
             description: 'Presento una carta Pokémon utilizando la PokeAPI. Al cargar la página, una función elige un número aleatorio y muestra los valores del Pokémon correspondiente.',
 
