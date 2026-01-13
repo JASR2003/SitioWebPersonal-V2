@@ -24,7 +24,7 @@ export function Projects() {
             demoUrl: 'https://jorgesuarez-calculadora.netlify.app/'
         },
         {
-            title: 'Piedra,Papel,Tijera',
+            title: 'Piedra, Papel, Tijera',
             description: 'El clásico Piedra Papel o Tijera de toda la vida, Intenta ganarle a la máquina, es al mejor de 5.',
 
             technologies: ['HTML', 'CSS', 'JavaScript'],

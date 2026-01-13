@@ -78,7 +78,7 @@ export function Hero() {
 
                         <div className="p-6 rounded-2xl bg-[#0D1F45] border border-gray-700/30">
                             <div className="bg-gradient-to-r from-[#FF6A3D] via-[#FF3D4E] via-[#8B4DFF] to-[#296BFF] bg-clip-text text-transparent mb-2">
-                                2
+                                3
                             </div>
                             <p className="text-sm text-gray-400">Empresas</p>
                         </div>
