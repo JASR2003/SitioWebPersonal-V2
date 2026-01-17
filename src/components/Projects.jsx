@@ -17,6 +17,28 @@ export function Projects() {
             demoUrl: 'https://jorgesuarez-first-v.netlify.app/'
         },
         {
+            title: 'Academy Productions Marketing',
+            description: 'Proyecto oficial desarrollado bajo la marca Academy Productions Marketing. Sitio corporativo que presenta los servicios, clientes y la identidad de la empresa.',
+
+            technologies: ['Wordpress', 'Elementor', 'Hostinger'],
+            demoUrl: 'https://academypm.net/'
+        },
+        {
+            title: 'DentPrax',
+            description: 'Proyecto oficial desarrollado bajo la marca Academy Producciones. Sitio web de odontología integral que presenta servicios especializados, información del equipo médico y canales de contacto para pacientes.',
+
+            technologies: ['Wordpress', 'Elementor', 'Hostinger'],
+            demoUrl: 'https://dentprax.com/'
+        },
+
+        {
+            title: 'Friendship Latte',
+            description: 'Proyecto oficial desarrollado bajo la marca Academy Productions Marketing. Blog semanal con integración de newsletter diseñado para la gestión de contenidos y crecimiento de audiencia.',
+
+            technologies: ['Wordpress', 'Elementor', 'Hostinger', 'DNS', 'MailChimp'],
+            demoUrl: 'https://friendshiplatte.com/'
+        },
+        {
             title: 'pokedex api',
             description: 'Presento una carta Pokémon utilizando la PokeAPI. Al cargar la página, una función elige un número aleatorio y muestra los valores del Pokémon correspondiente.',
 
