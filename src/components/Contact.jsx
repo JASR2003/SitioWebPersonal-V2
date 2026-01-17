@@ -34,7 +34,7 @@ export function Contact() {
             icon: <XIcon className="w-8 h-8" />,
             url: 'https://x.com/JorgeSuarezDev',
             color: 'hover:bg-black dark:hover:bg-white',
-            textColor: 'hover:text-white dark:hover:text-black'
+            textColor: 'hover:text-white dark:hover:text-gray-900'
         }
     ];
 
