@@ -5,7 +5,7 @@ export function Experience() {
         {
             title: 'Desarrollador WordPress',
             company: 'Academy Producciones & Academy Pro Marketing',
-            period: 'Julio 2024 - Marzo 2026',
+            period: 'Julio 2024 - Actualidad',
             description: 'Desarrollo y mantenimiento de sitios web WordPress para proyectos de marketing y producción audiovisual. Trabajo remoto con gestión completa de proyectos web.',
             achievements: [
                 'Desarrollo con WordPress y Elementor',
