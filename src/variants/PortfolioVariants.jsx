@@ -14,7 +14,7 @@ import {
   Terminal,
 } from 'lucide-react'
 import profilePhoto from '../assets/JorgeSuarez.jpg'
-import { VersionGallery, VersionMenu } from '../components/VersionExplorer'
+import { MobileSectionMenu, VersionGallery, VersionMenu } from '../components/VersionExplorer'
 import {
   education,
   experiences,
@@ -72,6 +72,12 @@ export function PortfolioV2() {
           <a href="#trayectoria">Trayectoria</a>
           <a href="#perfil">Perfil</a>
           <a className="v2-nav-cta" href="#contacto">Hablemos</a>
+          <MobileSectionMenu links={[
+            { label: 'Proyectos', href: '#trabajo' },
+            { label: 'Experiencia', href: '#trayectoria' },
+            { label: 'Conocimientos', href: '#perfil' },
+            { label: 'Contacto', href: '#contacto' },
+          ]} />
           <VersionMenu />
         </nav>
       </header>
@@ -206,6 +212,12 @@ export function PortfolioV3() {
             <a href="#experiencia"><span>03</span> ./experiencia</a>
             <a href="#stack"><span>04</span> ./stack</a>
             <a href="#contacto"><span>05</span> ./contacto</a>
+            <MobileSectionMenu links={[
+              { label: 'Proyectos', href: '#proyectos' },
+              { label: 'Experiencia', href: '#experiencia' },
+              { label: 'Conocimientos', href: '#stack' },
+              { label: 'Contacto', href: '#contacto' },
+            ]} />
             <VersionMenu />
           </nav>
           <div className="v3-sidebar-note">
@@ -322,6 +334,12 @@ export function PortfolioV4() {
           <a href="#proyectos">Proyectos</a>
           <a href="#experiencia">Experiencia</a>
           <a href="#conocimientos">Conocimientos</a>
+          <MobileSectionMenu links={[
+            { label: 'Proyectos', href: '#proyectos' },
+            { label: 'Experiencia', href: '#experiencia' },
+            { label: 'Conocimientos', href: '#conocimientos' },
+            { label: 'Contacto', href: '#contacto' },
+          ]} />
           <VersionMenu />
         </nav>
         <a href="#contacto" className="v4-contact-pill">Disponible <span aria-hidden="true">↗</span></a>
@@ -440,6 +458,12 @@ export function PortfolioV5() {
           <a href="#trabajo">TRABAJO</a>
           <a href="#experiencia">EXPERIENCIA</a>
           <a href="#contacto">CONTACTO</a>
+          <MobileSectionMenu links={[
+            { label: 'Proyectos', href: '#trabajo' },
+            { label: 'Experiencia', href: '#experiencia' },
+            { label: 'Conocimientos', href: '#conocimientos' },
+            { label: 'Contacto', href: '#contacto' },
+          ]} />
           <VersionMenu />
         </nav>
       </header>
@@ -495,7 +519,7 @@ export function PortfolioV5() {
           </div>
         </section>
 
-        <section className="v5-capabilities">
+        <section className="v5-capabilities" id="conocimientos">
           <div className="v5-title-row"><span>04</span><h2>CAPACIDADES</h2><p>{education.certificateCount} certificados y aprendizaje continuo desde 2020.</p></div>
           <div className="v5-capability-grid">
             {skills.map((skill) => <div key={skill.name}><strong>{skill.name}</strong><span>{skill.level}</span><p>{skill.detail}</p></div>)}

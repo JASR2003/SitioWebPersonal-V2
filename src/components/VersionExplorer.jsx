@@ -21,7 +21,7 @@ export function VersionMenu() {
   const activeVersion = currentVersion()
 
   return (
-    <details className="version-menu">
+    <details className="version-menu" name="navigation-menu">
       <summary>Versiones <span aria-hidden="true">＋</span></summary>
       <div className="version-menu-panel">
         {versions.map((version) => (
@@ -29,6 +29,22 @@ export function VersionMenu() {
             <span>{version.number}</span>
             <strong>{version.name}</strong>
             {activeVersion === version.id && <Check aria-label="Versión actual" />}
+          </a>
+        ))}
+      </div>
+    </details>
+  )
+}
+
+export function MobileSectionMenu({ links }) {
+  return (
+    <details className="mobile-section-menu" name="navigation-menu">
+      <summary>Menú <span aria-hidden="true">＋</span></summary>
+      <div className="mobile-section-menu-panel">
+        {links.map((link, index) => (
+          <a href={link.href} key={link.href}>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{link.label}</strong>
           </a>
         ))}
       </div>
