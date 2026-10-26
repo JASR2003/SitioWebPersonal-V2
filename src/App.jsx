@@ -17,9 +17,9 @@ function App() {
 
       <main id="contenido">
         <HeroEnhanced />
-        <SkillsEnhanced />
-        <ExperienceEnhanced />
         <ProjectsEnhanced />
+        <ExperienceEnhanced />
+        <SkillsEnhanced />
         <EducationEnhanced />
         <VersionGallery />
         <ContactEnhanced />

@@ -9,9 +9,9 @@ export function Navigation() {
 
     const navLinks = [
         { name: 'Inicio', href: '#inicio' },
-        { name: 'Conocimientos', href: '#conocimientos' },
-        { name: 'Experiencia', href: '#experiencia' },
         { name: 'Proyectos', href: '#proyectos' },
+        { name: 'Experiencia', href: '#experiencia' },
+        { name: 'Conocimientos', href: '#conocimientos' },
         { name: 'Estudios', href: '#estudios' },
         { name: 'Contacto', href: '#contacto' }
     ];

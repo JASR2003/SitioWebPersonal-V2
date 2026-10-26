@@ -57,7 +57,7 @@ export function SkillsEnhanced() {
     <section id="conocimientos" className="v1-skills-section">
       <div className="v1-section-shell">
         <SectionHeading
-          number="01"
+          number="03"
           eyebrow="Conocimientos"
           title="Herramientas que convierto en soluciones."
           description="Una combinación práctica de frontend, construcción visual y operación web para llevar un proyecto desde la idea hasta producción."
@@ -127,7 +127,7 @@ export function ProjectsEnhanced() {
     <section id="proyectos" className="v1-projects-section">
       <div className="v1-section-shell">
         <SectionHeading
-          number="03"
+          number="01"
           eyebrow="Proyectos destacados"
           title="Trabajo diseñado para ser usado."
           description="Sitios corporativos, portafolios, contenido y pequeños productos web construidos para objetivos concretos."
