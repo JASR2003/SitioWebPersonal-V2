@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, MapPin } from 'lucide-react';
+import { Github, Linkedin, MapPin } from 'lucide-react';
 
 const XIcon = ({ className }) => (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -20,13 +20,6 @@ export function Contact() {
             icon: <Linkedin className="w-8 h-8" />,
             url: 'https://www.linkedin.com/in/jorge-alejandro-suarez-rivera/',
             color: 'hover:bg-[#0077B5]',
-            textColor: 'hover:text-white'
-        },
-        {
-            name: 'Instagram',
-            icon: <Instagram className="w-8 h-8" />,
-            url: 'https://www.instagram.com/jasr0807/',
-            color: 'hover:bg-gradient-to-br hover:from-[#FF6A3D] hover:via-[#FF3D4E] hover:to-[#8B4DFF]',
             textColor: 'hover:text-white'
         },
         {

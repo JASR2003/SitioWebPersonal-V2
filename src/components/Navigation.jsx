@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 import logo from '../assets/logotipo-blanco.svg';
+import { VersionMenu } from './VersionExplorer';
 
 export function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,6 +59,7 @@ export function Navigation() {
                                 {link.name}
                             </a>
                         ))}
+                        <VersionMenu />
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -92,6 +94,7 @@ export function Navigation() {
                                 {link.name}
                             </a>
                         ))}
+                        <VersionMenu />
                     </div>
                 )}
             </div>

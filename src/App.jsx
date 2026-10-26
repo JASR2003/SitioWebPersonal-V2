@@ -1,28 +1,33 @@
 import { Navigation } from './components/Navigation';
-import { Hero } from './components/Hero';
-import { Skills } from './components/Skills';
-import { Experience } from './components/Experience';
-import { Projects } from './components/Projects';
-import { Education } from './components/Education';
-import { Contact } from './components/Contact';
+import { HeroEnhanced } from './components/HeroEnhanced';
+import {
+  ContactEnhanced,
+  EducationEnhanced,
+  ExperienceEnhanced,
+  ProjectsEnhanced,
+  SkillsEnhanced,
+} from './components/V1Sections';
+import { VersionGallery } from './components/VersionExplorer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0A1A3A] transition-colors duration-300">
+    <div className="v1-root min-h-screen bg-[#0A1A3A] transition-colors duration-300">
+      <a className="v1-skip-link" href="#contenido">Saltar al contenido</a>
       <Navigation />
 
-      <main>
-        <Hero />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Education />
-        <Contact />
+      <main id="contenido">
+        <HeroEnhanced />
+        <SkillsEnhanced />
+        <ExperienceEnhanced />
+        <ProjectsEnhanced />
+        <EducationEnhanced />
+        <VersionGallery />
+        <ContactEnhanced />
       </main>
 
       <footer className="bg-[#0D1F45] py-8 border-t border-gray-700/30">
         <div className="container mx-auto px-6 text-center text-gray-400">
-          <p>© 2025 Jorge Suárez. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Jorge Suárez. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>

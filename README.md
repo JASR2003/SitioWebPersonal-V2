@@ -1,16 +1,32 @@
-# React + Vite
+# Portafolio de Jorge Suárez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio multipágina construido con React, Vite y Tailwind CSS. El proyecto contiene cinco formas visuales de presentar el mismo perfil profesional.
 
-Currently, two official plugins are available:
+## Versiones
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `/` — versión original
+- `/v2/` — dirección editorial
+- `/v3/` — consola técnica
+- `/v4/` — estudio creativo modular
+- `/v5/` — diseño suizo/brutalista
 
-## React Compiler
+Las versiones 2–5 comparten los datos de `src/data/portfolio.js`, por lo que proyectos, experiencia, conocimientos y enlaces se actualizan desde un único archivo.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Todas las páginas incluyen un menú de versiones en su navegación y una galería comparativa antes del contacto o pie de página.
 
-## Expanding the ESLint configuration
+## Desarrollo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Validación y producción
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+Vite genera un documento HTML independiente por versión dentro de `dist/`, de modo que cada página puede abrirse directamente desde su propia ruta en un hosting estático.
