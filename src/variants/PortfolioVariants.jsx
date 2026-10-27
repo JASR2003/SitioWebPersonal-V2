@@ -92,7 +92,7 @@ export function PortfolioV2() {
           <div className="v2-hero-bottom">
             <div className="v2-photo-frame">
               <img src={profilePhoto} alt="Retrato de Jorge Suárez" />
-              <span>Caracas — VE</span>
+              <span>Mérida, VE</span>
             </div>
             <div className="v2-intro">
               <p>{profile.intro}</p>
