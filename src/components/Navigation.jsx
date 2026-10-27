@@ -23,7 +23,7 @@ export function Navigation() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0D1F45]/95 backdrop-blur-sm border-b border-gray-700/30 transition-colors duration-300 py-2">
-            <div className="container mx-auto px-6">
+            <div className="v1-nav-shell">
                 <div className="flex items-center justify-between h-16 md:h-20">
                     {/* Logo */}
                     <a

@@ -29,7 +29,7 @@ function App() {
       </main>
 
       <footer className="bg-[#0D1F45] py-8 border-t border-gray-700/30">
-        <div className="container mx-auto px-6 text-center text-gray-400">
+        <div className="v1-footer-shell text-center text-gray-400">
           <p>© {new Date().getFullYear()} Jorge Suárez. {copy.v1.rights}</p>
         </div>
       </footer>
