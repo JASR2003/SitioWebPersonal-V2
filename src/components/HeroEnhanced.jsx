@@ -1,8 +1,10 @@
 import { ArrowRight, Code2, MapPin, MessageCircle, Sparkles } from 'lucide-react'
 import profilePic from '../assets/JorgeSuarez.jpg'
-import { profile, stats } from '../data/portfolio'
+import { useLanguage } from '../i18n/language-context'
 
 export function HeroEnhanced() {
+  const { content: { profile, stats }, copy } = useLanguage()
+
   const scrollTo = (selector) => {
     document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -14,29 +16,29 @@ export function HeroEnhanced() {
       <div className="v1-hero-grid">
         <div className="v1-hero-copy">
           <div className="v1-availability"><span />{profile.availability}</div>
-          <p className="v1-overline"><Sparkles aria-hidden="true" /> Hola, soy Jorge Suárez</p>
-          <h1>Creo experiencias web que se sienten <span>claras</span> y funcionan de verdad.</h1>
+          <p className="v1-overline"><Sparkles aria-hidden="true" /> {copy.v1.hello}</p>
+          <h1>{copy.v1.heroBefore} <span>{copy.v1.heroAccent}</span> {copy.v1.heroAfter}</h1>
           <p className="v1-lead">{profile.intro}</p>
           <div className="v1-hero-actions">
-            <button onClick={() => scrollTo('#proyectos')}>Ver proyectos <ArrowRight aria-hidden="true" /></button>
-            <button onClick={() => scrollTo('#contacto')}>Hablemos <MessageCircle aria-hidden="true" /></button>
+            <button onClick={() => scrollTo('#proyectos')}>{copy.v1.viewProjects} <ArrowRight aria-hidden="true" /></button>
+            <button onClick={() => scrollTo('#contacto')}>{copy.v1.talk} <MessageCircle aria-hidden="true" /></button>
           </div>
-          <div className="v1-focus-list" aria-label="Áreas principales">
-            <span>Frontend</span><span>WordPress</span><span>Diseño responsive</span>
+          <div className="v1-focus-list" aria-label={copy.v1.focusLabel}>
+            {copy.v1.focus.map((item) => <span key={item}>{item}</span>)}
           </div>
         </div>
         <div className="v1-visual">
           <div className="v1-photo-shell">
-            <img src={profilePic} alt="Retrato de Jorge Suárez" />
+            <img src={profilePic} alt={copy.shared.photoAlt} />
             <div className="v1-photo-caption"><strong>{profile.role}</strong><span><MapPin aria-hidden="true" /> {profile.location}</span></div>
           </div>
-          <div className="v1-floating-card v1-floating-code"><Code2 aria-hidden="true" /><span>Diseño + código</span></div>
-          <div className="v1-floating-card v1-floating-status"><span /> Disponible</div>
+          <div className="v1-floating-card v1-floating-code"><Code2 aria-hidden="true" /><span>{copy.v1.designCode}</span></div>
+          <div className="v1-floating-card v1-floating-status"><span /> {copy.v1.available}</div>
         </div>
       </div>
       <div className="v1-stat-row">
         {stats.map((stat) => <div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}
-        <a href="#versiones">Explorar las 5 versiones <ArrowRight aria-hidden="true" /></a>
+        <a href="#versiones">{copy.v1.exploreVersions} <ArrowRight aria-hidden="true" /></a>
       </div>
     </section>
   )

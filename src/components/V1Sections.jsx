@@ -12,7 +12,9 @@ import {
   Linkedin,
   MapPin,
 } from 'lucide-react'
-import { education, experiences, projects, skills, socialLinks } from '../data/portfolio'
+import { socialLinks } from '../data/portfolio'
+import { certificateTitles } from '../i18n/content'
+import { useLanguage } from '../i18n/language-context'
 
 const certificateModules = import.meta.glob('../assets/certificados/*.png', {
   eager: true,
@@ -20,20 +22,27 @@ const certificateModules = import.meta.glob('../assets/certificados/*.png', {
   import: 'default',
 })
 
-function certificateTitle(path) {
+function certificateSlug(path) {
   return path
     .split('/')
     .pop()
     .replace('.png', '')
     .replace(/^diploma-/, '')
     .replace(/-1$|-2-3$|-2020-1$/, '')
+}
+
+function certificateTitle(slug) {
+  return slug
     .replaceAll('-', ' ')
     .replace(/\b(html|css|javascript|ecmascript|wordpress)\b/gi, (word) => word.toUpperCase())
     .replace(/\b\w/g, (letter) => letter.toUpperCase())
 }
 
 const certificates = Object.entries(certificateModules)
-  .map(([path, image]) => ({ title: certificateTitle(path), image }))
+  .map(([path, image]) => {
+    const slug = certificateSlug(path)
+    return { slug, title: certificateTitle(slug), image }
+  })
   .sort((a, b) => a.title.localeCompare(b.title, 'es'))
 
 const socialIcons = {
@@ -53,18 +62,20 @@ function SectionHeading({ number, eyebrow, title, description }) {
 }
 
 export function SkillsEnhanced() {
+  const { content: { skills }, copy } = useLanguage()
+
   return (
     <section id="conocimientos" className="v1-skills-section">
       <div className="v1-section-shell">
         <SectionHeading
           number="03"
-          eyebrow="Conocimientos"
-          title="Herramientas que convierto en soluciones."
-          description="Una combinación práctica de frontend, construcción visual y operación web para llevar un proyecto desde la idea hasta producción."
+          eyebrow={copy.v1.skills.eyebrow}
+          title={copy.v1.skills.title}
+          description={copy.v1.skills.description}
         />
         <div className="v1-skills-intro">
-          <div><strong>12</strong><span>tecnologías y herramientas</span></div>
-          <p>No se trata de coleccionar logos: cada herramienta aparece porque ya forma parte de mi flujo de trabajo.</p>
+          <div><strong>{skills.length}</strong><span>{copy.v1.skills.count}</span></div>
+          <p>{copy.v1.skills.intro}</p>
         </div>
         <div className="v1-skills-matrix">
           {skills.map((skill, index) => (
@@ -72,7 +83,10 @@ export function SkillsEnhanced() {
               <div><span>{String(index + 1).padStart(2, '0')}</span><small>{skill.level}</small></div>
               <h3>{skill.name}</h3>
               <p>{skill.detail}</p>
-              <div className={`v1-skill-meter level-${skill.level.toLowerCase()}`} aria-label={`Nivel: ${skill.level}`}><span /></div>
+              <div
+                className={`v1-skill-meter level-${['Avanzado', 'Advanced'].includes(skill.level) ? 'avanzado' : ['Intermedio', 'Intermediate'].includes(skill.level) ? 'intermedio' : 'basico'}`}
+                aria-label={`${copy.v1.skills.level}: ${skill.level}`}
+              ><span /></div>
             </article>
           ))}
         </div>
@@ -82,20 +96,22 @@ export function SkillsEnhanced() {
 }
 
 export function ExperienceEnhanced() {
+  const { content: { experiences }, copy } = useLanguage()
+
   return (
     <section id="experiencia" className="v1-experience-section">
       <div className="v1-section-shell">
         <SectionHeading
           number="02"
-          eyebrow="Experiencia"
-          title="Aprendizaje convertido en trabajo real."
-          description="Experiencias remotas, proyectos independientes y responsabilidad directa sobre sitios que necesitan seguir funcionando."
+          eyebrow={copy.v1.experience.eyebrow}
+          title={copy.v1.experience.title}
+          description={copy.v1.experience.description}
         />
         <div className="v1-experience-layout">
           <aside>
             <span className="v1-live-dot" />
-            <strong>Trayectoria activa</strong>
-            <p>Desde interfaces frontend hasta gestión de hosting, dominios y mantenimiento WordPress.</p>
+            <strong>{copy.v1.experience.active}</strong>
+            <p>{copy.v1.experience.activeDescription}</p>
           </aside>
           <div className="v1-experience-list">
             {experiences.map((experience, index) => (
@@ -120,6 +136,7 @@ export function ExperienceEnhanced() {
 }
 
 export function ProjectsEnhanced() {
+  const { content: { projects }, copy } = useLanguage()
   const featuredProjects = projects.slice(0, 4)
   const archiveProjects = projects.slice(4)
 
@@ -128,9 +145,9 @@ export function ProjectsEnhanced() {
       <div className="v1-section-shell">
         <SectionHeading
           number="01"
-          eyebrow="Proyectos destacados"
-          title="Trabajo diseñado para ser usado."
-          description="Sitios corporativos, portafolios, contenido y pequeños productos web construidos para objetivos concretos."
+          eyebrow={copy.v1.projects.eyebrow}
+          title={copy.v1.projects.title}
+          description={copy.v1.projects.description}
         />
         <div className="v1-featured-projects">
           {featuredProjects.map((project, index) => (
@@ -144,13 +161,13 @@ export function ProjectsEnhanced() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div>{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
-                <a href={project.url} target="_blank" rel="noreferrer">Visitar proyecto <ExternalLink aria-hidden="true" /></a>
+                <a href={project.url} target="_blank" rel="noreferrer">{copy.v1.projects.visit} <ExternalLink aria-hidden="true" /></a>
               </div>
             </article>
           ))}
         </div>
         <div className="v1-project-archive">
-          <div><span>Archivo</span><strong>Otros experimentos y proyectos</strong></div>
+          <div><span>{copy.v1.projects.archive}</span><strong>{copy.v1.projects.archiveTitle}</strong></div>
           {archiveProjects.map((project) => (
             <a href={project.url} target="_blank" rel="noreferrer" key={project.title}>
               <span>{project.category}</span><strong>{project.title}</strong><span>{project.technologies.slice(0, 2).join(' · ')}</span><ArrowUpRight aria-hidden="true" />
@@ -163,8 +180,10 @@ export function ProjectsEnhanced() {
 }
 
 export function EducationEnhanced() {
+  const { language, content: { education }, copy } = useLanguage()
   const [currentCertificate, setCurrentCertificate] = useState(0)
   const certificate = certificates[currentCertificate]
+  const localizedCertificateTitle = language === 'en' ? certificateTitles.en[certificate.slug] ?? certificate.title : certificate.title
   const moveCertificate = (direction) => {
     setCurrentCertificate((current) => (current + direction + certificates.length) % certificates.length)
   }
@@ -174,29 +193,29 @@ export function EducationEnhanced() {
       <div className="v1-section-shell">
         <SectionHeading
           number="04"
-          eyebrow="Formación"
-          title="La curiosidad también forma parte del stack."
-          description="Formación continua en frontend, diseño de interfaces, JavaScript, CSS y construcción de sitios con WordPress."
+          eyebrow={copy.v1.education.eyebrow}
+          title={copy.v1.education.title}
+          description={copy.v1.education.description}
         />
         <div className="v1-education-layout">
           <article className="v1-degree-card">
-            <div><GraduationCap aria-hidden="true" /><span>Formación principal</span></div>
+            <div><GraduationCap aria-hidden="true" /><span>{copy.v1.education.main}</span></div>
             <p>{education.period}</p>
             <h3>{education.title}</h3>
             <h4>{education.institution}</h4>
             <p>{education.description}</p>
-            <div className="v1-certificate-total"><strong>{certificates.length}</strong><span>certificados completados</span></div>
+            <div className="v1-certificate-total"><strong>{certificates.length}</strong><span>{copy.v1.education.completed}</span></div>
           </article>
           <div className="v1-certificate-viewer">
             <div className="v1-certificate-toolbar">
-              <div><Award aria-hidden="true" /><span>Certificado {String(currentCertificate + 1).padStart(2, '0')} / {certificates.length}</span></div>
+              <div><Award aria-hidden="true" /><span>{copy.v1.education.certificate} {String(currentCertificate + 1).padStart(2, '0')} / {certificates.length}</span></div>
               <div>
-                <button onClick={() => moveCertificate(-1)} aria-label="Certificado anterior"><ChevronLeft /></button>
-                <button onClick={() => moveCertificate(1)} aria-label="Siguiente certificado"><ChevronRight /></button>
+                <button onClick={() => moveCertificate(-1)} aria-label={copy.v1.education.previous}><ChevronLeft /></button>
+                <button onClick={() => moveCertificate(1)} aria-label={copy.v1.education.next}><ChevronRight /></button>
               </div>
             </div>
-            <div className="v1-certificate-image"><img src={certificate.image} alt={certificate.title} /></div>
-            <div className="v1-certificate-caption"><span>Platzi</span><h3>{certificate.title}</h3></div>
+            <div className="v1-certificate-image"><img src={certificate.image} alt={localizedCertificateTitle} /></div>
+            <div className="v1-certificate-caption"><span>Platzi</span><h3>{localizedCertificateTitle}</h3></div>
             <div className="v1-certificate-progress"><span style={{ width: `${((currentCertificate + 1) / certificates.length) * 100}%` }} /></div>
           </div>
         </div>
@@ -206,20 +225,22 @@ export function EducationEnhanced() {
 }
 
 export function ContactEnhanced() {
+  const { copy } = useLanguage()
+
   return (
     <section id="contacto" className="v1-contact-section">
       <div className="v1-contact-orb" aria-hidden="true" />
       <div className="v1-section-shell">
-        <span className="v1-contact-number">05 / Contacto</span>
-        <h2>Una buena idea merece una buena ejecución.</h2>
-        <p>Estoy disponible para oportunidades laborales, colaboraciones y proyectos web donde pueda aportar criterio visual y técnico.</p>
+        <span className="v1-contact-number">{copy.v1.contact.label}</span>
+        <h2>{copy.v1.contact.title}</h2>
+        <p>{copy.v1.contact.description}</p>
         <div className="v1-contact-links">
           {socialLinks.map((social) => {
             const Icon = socialIcons[social.name] ?? ArrowUpRight
             return <a href={social.url} target="_blank" rel="noreferrer" key={social.name}><Icon aria-hidden="true" /><span>{social.name}<small>{social.label}</small></span><ArrowUpRight aria-hidden="true" /></a>
           })}
         </div>
-        <div className="v1-location"><MapPin aria-hidden="true" /><div><span>Ubicación</span><strong>Venezuela · Disponible para trabajo remoto</strong></div></div>
+        <div className="v1-location"><MapPin aria-hidden="true" /><div><span>{copy.v1.contact.location}</span><strong>{copy.v1.contact.remote}</strong></div></div>
       </div>
     </section>
   )

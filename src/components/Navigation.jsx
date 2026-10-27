@@ -3,18 +3,15 @@ import { Menu, X } from 'lucide-react';
 
 import logo from '../assets/logotipo-blanco.svg';
 import { VersionMenu } from './VersionExplorer';
+import { LanguageSwitcher } from '../i18n/LanguageSwitcher';
+import { useLanguage } from '../i18n/language-context';
 
 export function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { copy } = useLanguage();
 
-    const navLinks = [
-        { name: 'Inicio', href: '#inicio' },
-        { name: 'Proyectos', href: '#proyectos' },
-        { name: 'Experiencia', href: '#experiencia' },
-        { name: 'Conocimientos', href: '#conocimientos' },
-        { name: 'Estudios', href: '#estudios' },
-        { name: 'Contacto', href: '#contacto' }
-    ];
+    const navLinks = ['#inicio', '#proyectos', '#experiencia', '#conocimientos', '#estudios', '#contacto']
+        .map((href, index) => ({ name: copy.v1.nav[index], href }));
 
     const scrollToSection = (href) => {
         const element = document.querySelector(href);
@@ -45,7 +42,7 @@ export function Navigation() {
                     </a>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center gap-8">
+                    <div className="hidden lg:flex items-center gap-4">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
@@ -59,6 +56,7 @@ export function Navigation() {
                                 {link.name}
                             </a>
                         ))}
+                        <LanguageSwitcher />
                         <VersionMenu />
                     </div>
 
@@ -67,7 +65,8 @@ export function Navigation() {
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="p-2 rounded-lg bg-[#0A1A3A] transition-all"
-                            aria-label="Toggle menu"
+                            aria-label={isMenuOpen ? copy.v1.menuClose : copy.v1.menuOpen}
+                            aria-expanded={isMenuOpen}
                         >
                             {isMenuOpen ? (
                                 <X className="w-6 h-6 text-gray-300" />
@@ -94,6 +93,7 @@ export function Navigation() {
                                 {link.name}
                             </a>
                         ))}
+                        <LanguageSwitcher className="v1-mobile-language" />
                         <VersionMenu />
                     </div>
                 )}
