@@ -73,6 +73,36 @@ export const portfolioContent = {
     ],
     projects: [
       {
+        slug: 'monix',
+        title: 'moniX',
+      iconAlt: 'moniX app icon',
+        category: 'Mobile app · Google Play',
+        badge: 'My first published app',
+        tagline: 'Where value matters',
+        description:
+          'My first app published on Google Play: a free tool for checking exchange rates, converting currencies, and calculating with multiple currencies, designed especially for the everyday needs of people in Venezuela.',
+        features: [
+          'Calculator with multi-currency equivalents',
+          'Quick currency converter',
+          'Exchange rates and historical charts',
+          'Manual rate for personal calculations',
+          'Operation history',
+          'Latest saved rates available offline',
+          'Available in Spanish, English, and Brazilian Portuguese',
+        ],
+        technologies: ['React Native', 'Expo', 'TypeScript'],
+        storeLabel: 'View on Google Play',
+        galleryLabel: 'moniX screenshots',
+        screenshotAlts: [
+          'moniX multi-currency calculator',
+          'moniX quick converter',
+          'Exchange-rate list in moniX',
+          'Historical exchange-rate chart in moniX',
+        ],
+        url: 'https://play.google.com/store/apps/details?id=com.jorgesuarezdevs.monix',
+        isSpotlight: true,
+      },
+      {
         title: 'Asdrúbal Suárez',
         category: 'Professional portfolio',
         description:

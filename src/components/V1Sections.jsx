@@ -15,6 +15,7 @@ import {
 import { socialLinks } from '../data/portfolio'
 import { certificateTitles } from '../i18n/content'
 import { useLanguage } from '../i18n/language-context'
+import { MonixSpotlight } from './MonixSpotlight'
 
 const certificateModules = import.meta.glob('../assets/certificados/*.png', {
   eager: true,
@@ -137,8 +138,9 @@ export function ExperienceEnhanced() {
 
 export function ProjectsEnhanced() {
   const { content: { projects }, copy } = useLanguage()
-  const featuredProjects = projects.slice(0, 4)
-  const archiveProjects = projects.slice(4)
+  const standardProjects = projects.filter((project) => !project.isSpotlight)
+  const featuredProjects = standardProjects.slice(0, 4)
+  const archiveProjects = standardProjects.slice(4)
 
   return (
     <section id="proyectos" className="v1-projects-section">
@@ -149,6 +151,7 @@ export function ProjectsEnhanced() {
           title={copy.v1.projects.title}
           description={copy.v1.projects.description}
         />
+        <MonixSpotlight variant="v1" />
         <div className="v1-featured-projects">
           {featuredProjects.map((project, index) => (
             <article key={project.title}>

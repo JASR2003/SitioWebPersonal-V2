@@ -12,6 +12,7 @@ import {
 } from 'lucide-react'
 import profilePhoto from '../assets/JorgeSuarez.jpg'
 import { MobileSectionMenu, VersionGallery, VersionMenu } from '../components/VersionExplorer'
+import { MonixSpotlight } from '../components/MonixSpotlight'
 import { socialLinks } from '../data/portfolio'
 import { LanguageSwitcher } from '../i18n/LanguageSwitcher'
 import { useLanguage } from '../i18n/language-context'
@@ -52,8 +53,9 @@ function SocialLinks({ className = '', itemClassName = '' }) {
 
 export function PortfolioV2() {
   const { content: { education, experiences, profile, projects, skills, stats }, copy } = useLanguage()
-  const featuredProjects = projects.slice(0, 4)
-  const remainingProjects = projects.slice(4)
+  const standardProjects = projects.filter((project) => !project.isSpotlight)
+  const featuredProjects = standardProjects.slice(0, 4)
+  const remainingProjects = standardProjects.slice(4)
   const ui = copy.v2
 
   return (
@@ -107,6 +109,8 @@ export function PortfolioV2() {
             <h2>{ui.workTitle}</h2>
             <span>{ui.workDescription}</span>
           </div>
+
+          <MonixSpotlight variant="v2" />
 
           <div className="v2-project-list">
             {featuredProjects.map((project, index) => (
@@ -192,6 +196,7 @@ export function PortfolioV2() {
 
 export function PortfolioV3() {
   const { content: { experiences, profile, projects, skills }, copy } = useLanguage()
+  const standardProjects = projects.filter((project) => !project.isSpotlight)
   const ui = copy.v3
 
   return (
@@ -252,8 +257,9 @@ export function PortfolioV3() {
               <p><span>$</span> ls ./selected-work</p>
               <h2>{ui.deployed}</h2>
             </div>
+            <MonixSpotlight variant="v3" />
             <div className="v3-project-grid">
-              {projects.map((project, index) => (
+              {standardProjects.map((project, index) => (
                 <article key={project.title}>
                   <div className="v3-file-head">
                     <span>{String(index + 1).padStart(2, '0')}.project</span>
@@ -327,8 +333,9 @@ export function PortfolioV3() {
 
 export function PortfolioV4() {
   const { content: { experiences, profile, projects, skills }, copy } = useLanguage()
-  const featuredProjects = projects.slice(0, 4)
-  const remainingProjects = projects.slice(4)
+  const standardProjects = projects.filter((project) => !project.isSpotlight)
+  const featuredProjects = standardProjects.slice(0, 4)
+  const remainingProjects = standardProjects.slice(4)
   const ui = copy.v4
 
   return (
@@ -381,6 +388,7 @@ export function PortfolioV4() {
           <div className="v4-heading">
             <span>01</span><div><p>{ui.projectsEyebrow}</p><h2>{ui.projectsTitle}</h2></div>
           </div>
+          <MonixSpotlight variant="v4" />
           <div className="v4-featured-grid">
             {featuredProjects.map((project, index) => (
               <article key={project.title} className={`v4-project-card v4-project-${index + 1}`}>
@@ -456,6 +464,7 @@ export function PortfolioV4() {
 
 export function PortfolioV5() {
   const { content: { education, experiences, profile, projects, skills }, copy } = useLanguage()
+  const standardProjects = projects.filter((project) => !project.isSpotlight)
   const ui = copy.v5
 
   return (
@@ -502,8 +511,9 @@ export function PortfolioV5() {
 
         <section className="v5-work" id="trabajo">
           <div className="v5-title-row"><span>02</span><h2>{ui.selectedWork[0]}<br />{ui.selectedWork[1]}</h2><p>{ui.projectsSummary(projects.length)}</p></div>
+          <MonixSpotlight variant="v5" />
           <div className="v5-project-table">
-            {projects.map((project, index) => (
+            {standardProjects.map((project, index) => (
               <ExternalProjectLink project={project} key={project.title}>
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{project.title}</strong>

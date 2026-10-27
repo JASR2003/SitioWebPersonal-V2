@@ -64,6 +64,36 @@ export const experiences = [
 
 export const projects = [
   {
+    slug: 'monix',
+    title: 'moniX',
+      iconAlt: 'Icono de la aplicación moniX',
+    category: 'Aplicación móvil · Google Play',
+    badge: 'Mi primera app publicada',
+    tagline: 'Donde el valor importa',
+    description:
+      'Mi primera aplicación publicada en Google Play: una herramienta gratuita para consultar tasas de cambio, convertir monedas y realizar cálculos con varias divisas, pensada especialmente para las necesidades cotidianas de usuarios en Venezuela.',
+    features: [
+      'Calculadora con equivalencias en varias monedas',
+      'Conversor rápido',
+      'Tasas de cambio y gráficos históricos',
+      'Tasa manual para cálculos personales',
+      'Historial de operaciones',
+      'Últimas tasas guardadas disponibles sin conexión',
+      'Disponible en español, inglés y portugués de Brasil',
+    ],
+    technologies: ['React Native', 'Expo', 'TypeScript'],
+    storeLabel: 'Ver en Google Play',
+    galleryLabel: 'Capturas de moniX',
+    screenshotAlts: [
+      'Calculadora multidivisa de moniX',
+      'Conversor rápido de moniX',
+      'Listado de tasas de cambio en moniX',
+      'Gráfico histórico de tasas en moniX',
+    ],
+    url: 'https://play.google.com/store/apps/details?id=com.jorgesuarezdevs.monix',
+    isSpotlight: true,
+  },
+  {
     title: 'Asdrúbal Suárez',
     category: 'Portafolio profesional',
     description:
