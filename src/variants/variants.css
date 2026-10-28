@@ -227,7 +227,7 @@
 .v2-archive svg { width: 1.125rem; }
 .v2-experience { padding: var(--layout-section-space) var(--layout-gutter); background: var(--ink); color: var(--paper); }
 .v2-section-heading-light { border-bottom: .0625rem solid #5c645f; padding-bottom: 3.125rem; }
-.v2-experience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .0625rem; background: #5c645f; }
+.v2-experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .0625rem; background: #5c645f; }
 .v2-experience-grid article { background: var(--ink); padding: 2.125rem; min-height: 25rem; }
 .v2-experience-grid article > span { color: #ff765b; font: italic 1.3rem var(--font-serif); }
 .v2-experience-grid article > p:first-of-type { margin: 4.375rem 0 1.125rem; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: #aeb5b0; }
