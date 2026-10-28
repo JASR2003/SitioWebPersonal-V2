@@ -4,17 +4,29 @@
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  --font-sans: "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", Inter, system-ui, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --text-xs: clamp(.75rem, .72rem + .1vw, .825rem);
+  --text-sm: clamp(.875rem, .84rem + .12vw, .95rem);
+  --text-base: clamp(1rem, .96rem + .14vw, 1.1rem);
   --page-gutter: clamp(1.125rem, 4vw, 6rem);
   --section-space: clamp(4.5rem, 8vw, 8rem);
 }
 
 html {
   scroll-behavior: smooth;
+  /* Keep the same visual proportions from Full HD through 8K and TV-sized viewports. */
+  font-size: clamp(100%, 1.48148vmin, 400%);
 }
 
 body {
   margin: 0;
   min-width: 20rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 button,

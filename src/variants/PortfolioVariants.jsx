@@ -64,7 +64,7 @@ export function PortfolioV2() {
         <a className="v2-mark" href="#inicio" aria-label={ui.home}>
           JS<span>®</span>
         </a>
-        <nav aria-label={copy.shared.navigation}>
+        <nav className="variant-nav" aria-label={copy.shared.navigation}>
           <a href="#trabajo">{ui.nav[0]}</a>
           <a href="#trayectoria">{ui.nav[1]}</a>
           <a href="#perfil">{ui.nav[2]}</a>
@@ -210,7 +210,7 @@ export function PortfolioV3() {
       <div className="v3-layout">
         <aside className="v3-sidebar">
           <a className="v3-logo" href="#inicio"><Terminal aria-hidden="true" /> JS.dev</a>
-          <nav aria-label={copy.shared.navigation}>
+          <nav className="variant-nav" aria-label={copy.shared.navigation}>
             <a href="#inicio"><span>01</span> {ui.paths[0]}</a>
             <a href="#proyectos"><span>02</span> {ui.paths[1]}</a>
             <a href="#experiencia"><span>03</span> {ui.paths[2]}</a>
@@ -342,7 +342,7 @@ export function PortfolioV4() {
     <div className="v4-root">
       <header className="v4-header">
         <a href="#inicio" className="v4-brand">Jorge<span>Suárez</span></a>
-        <nav aria-label={copy.shared.navigation}>
+        <nav className="variant-nav" aria-label={copy.shared.navigation}>
           <a href="#proyectos">{ui.nav[0]}</a>
           <a href="#experiencia">{ui.nav[1]}</a>
           <a href="#conocimientos">{ui.nav[2]}</a>
@@ -472,7 +472,7 @@ export function PortfolioV5() {
       <header className="v5-header">
         <a href="#inicio">JS/26</a>
         <p>{ui.developer}<br />& WORDPRESS</p>
-        <nav aria-label={copy.shared.navigation}>
+        <nav className="variant-nav" aria-label={copy.shared.navigation}>
           <a href="#trabajo">{ui.nav[0]}</a>
           <a href="#experiencia">{ui.nav[1]}</a>
           <a href="#contacto">{ui.nav[2]}</a>

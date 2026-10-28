@@ -42,7 +42,7 @@ export function Navigation() {
                     </a>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center gap-4">
+                    <div className="variant-nav hidden lg:flex items-center gap-4">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
