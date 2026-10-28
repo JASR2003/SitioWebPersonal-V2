@@ -1,10 +1,10 @@
 export const profile = {
   name: 'Jorge Suárez',
-  role: 'Desarrollador Frontend y WordPress',
+  role: 'Desarrollador Frontend, WordPress y Mobile',
   location: 'Venezuela',
   availability: 'Disponible para nuevas oportunidades',
   intro:
-    'Creo sitios web modernos, responsivos y funcionales, combinando desarrollo frontend, WordPress y una mirada práctica al diseño de interfaces.',
+    'Creo sitios web y aplicaciones móviles modernos, responsivos y funcionales, combinando desarrollo frontend, WordPress, React Native y una mirada práctica al diseño de interfaces.',
   shortIntro:
     'Transformo ideas en experiencias web claras, rápidas y fáciles de usar.',
 };
@@ -19,6 +19,9 @@ export const skills = [
   { name: 'HTML5', level: 'Avanzado', detail: 'Semántica y accesibilidad' },
   { name: 'CSS', level: 'Avanzado', detail: 'Flexbox, Grid y animación' },
   { name: 'JavaScript', level: 'Intermedio', detail: 'ES6+, closures y scope' },
+  { name: 'TypeScript', level: 'Intermedio', detail: 'Tipado y mantenimiento de aplicaciones' },
+  { name: 'React Native', level: 'Intermedio', detail: 'Aplicaciones móviles multiplataforma' },
+  { name: 'Expo', level: 'Intermedio', detail: 'Desarrollo, pruebas y publicación Android' },
   { name: 'WordPress', level: 'Avanzado', detail: 'CMS y desarrollo web' },
   { name: 'Elementor', level: 'Avanzado', detail: 'Construcción visual profesional' },
   { name: 'Tailwind CSS', level: 'Intermedio', detail: 'Diseño utility-first' },
@@ -32,9 +35,22 @@ export const skills = [
 
 export const experiences = [
   {
+    title: 'Desarrollador Mobile',
+    company: 'moniX · Proyecto independiente',
+    period: 'Agosto 2026 — Actualidad',
+    description:
+      'Diseño, desarrollo, publicación y mantenimiento continuo de una aplicación Android para consultar tasas de cambio, convertir monedas y realizar cálculos multidivisa.',
+    achievements: [
+      'React Native, Expo y TypeScript',
+      'APIs regionales, tasas de referencia del BCV y comparación de tasas',
+      'Gráficos históricos, historial local y funcionamiento sin conexión',
+      'Localización ES/EN/PT-BR, privacidad de AdMob y publicación en Google Play',
+    ],
+  },
+  {
     title: 'Desarrollador WordPress',
     company: 'Academy Producciones & Academy Pro Marketing',
-    period: 'Julio 2024 — Actualidad',
+    period: 'Julio 2024 — Mayo 2026',
     description:
       'Desarrollo y mantenimiento de sitios WordPress para proyectos de marketing y producción audiovisual, con gestión integral del entorno web.',
     achievements: [
@@ -75,7 +91,7 @@ export const projects = [
     features: [
       'Calculadora con equivalencias en varias monedas',
       'Conversor rápido',
-      'Tasas de cambio y gráficos históricos',
+      'Tasas regionales, referencia del BCV, comparación y gráficos históricos',
       'Tasa manual para cálculos personales',
       'Historial de operaciones',
       'Últimas tasas guardadas disponibles sin conexión',

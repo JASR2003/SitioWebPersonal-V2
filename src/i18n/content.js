@@ -19,11 +19,11 @@ export const portfolioContent = {
   en: {
     profile: {
       name: 'Jorge Suárez',
-      role: 'Frontend & WordPress Developer',
+      role: 'Frontend, WordPress & Mobile Developer',
       location: 'Mérida, Venezuela',
       availability: 'Available for new opportunities',
       intro:
-        'I build modern, responsive, and functional websites by combining frontend development, WordPress, and a practical approach to interface design.',
+        'I build modern, responsive, and functional websites and mobile applications by combining frontend development, WordPress, React Native, and a practical approach to interface design.',
       shortIntro: 'I turn ideas into clear, fast, and easy-to-use web experiences.',
     },
     stats: [
@@ -35,6 +35,9 @@ export const portfolioContent = {
       { name: 'HTML5', level: 'Advanced', detail: 'Semantics and accessibility' },
       { name: 'CSS', level: 'Advanced', detail: 'Flexbox, Grid, and animation' },
       { name: 'JavaScript', level: 'Intermediate', detail: 'ES6+, closures, and scope' },
+      { name: 'TypeScript', level: 'Intermediate', detail: 'Typed application development and maintenance' },
+      { name: 'React Native', level: 'Intermediate', detail: 'Cross-platform mobile applications' },
+      { name: 'Expo', level: 'Intermediate', detail: 'Android development, testing, and publishing' },
       { name: 'WordPress', level: 'Advanced', detail: 'CMS and web development' },
       { name: 'Elementor', level: 'Advanced', detail: 'Professional visual building' },
       { name: 'Tailwind CSS', level: 'Intermediate', detail: 'Utility-first design' },
@@ -47,9 +50,22 @@ export const portfolioContent = {
     ],
     experiences: [
       {
+        title: 'Mobile App Developer',
+        company: 'moniX · Independent project',
+        period: 'August 2026 — Present',
+        description:
+          'I design, develop, publish, and continuously maintain an Android app for checking exchange rates, converting currencies, and performing multi-currency calculations.',
+        achievements: [
+          'React Native, Expo, and TypeScript',
+          'Regional APIs, BCV reference rates, and rate comparison',
+          'Historical charts, local history, and offline access',
+          'ES/EN/PT-BR localization, AdMob privacy flows, and Google Play publishing',
+        ],
+      },
+      {
         title: 'WordPress Developer',
         company: 'Academy Producciones & Academy Pro Marketing',
-        period: 'July 2024 — Present',
+        period: 'July 2024 — May 2026',
         description:
           'I develop and maintain WordPress websites for marketing and audiovisual production projects, managing the complete web environment.',
         achievements: ['WordPress and Elementor', 'Hosting, domains, and DNS', 'FTP and file management', 'Solutions with basic PHP'],
@@ -84,7 +100,7 @@ export const portfolioContent = {
         features: [
           'Calculator with multi-currency equivalents',
           'Quick currency converter',
-          'Exchange rates and historical charts',
+          'Regional rates, BCV reference rates, comparison, and historical charts',
           'Manual rate for personal calculations',
           'Operation history',
           'Latest saved rates available offline',
