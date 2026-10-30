@@ -56,27 +56,8 @@ function DemoPreview({ demo, className = '' }) {
   )
 }
 
-function DemoDirectory({ demos, className = '' }) {
-  const { ui } = useDemoContent()
-  return (
-    <div className={className}>
-      <div className="web-demo-directory-heading">
-        <h3>{ui.directory}</h3><p>{ui.directoryDescription}</p>
-      </div>
-      <div className="web-demo-directory-list">
-        {demos.map((demo, index) => (
-          <DemoLink demo={demo} key={demo.id} className="web-demo-directory-link">
-            <span>{String(index + 1).padStart(2, '0')}</span><strong>{demo.title}</strong><small>{demo.format}</small><ArrowUpRight aria-hidden="true" />
-          </DemoLink>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 export function WebDemosV1() {
   const { demos, ui } = useDemoContent()
-  const featured = demos.filter((demo) => demo.featured)
   return (
     <section className="v1-web-demos" id="web-demos" aria-labelledby="v1-web-demos-title">
       <div className="v1-section-shell">
@@ -85,7 +66,7 @@ export function WebDemosV1() {
         </div>
         <CatalogGateway className="v1-demo-gateway" />
         <div className="v1-demo-grid">
-          {featured.map((demo, index) => (
+          {demos.map((demo, index) => (
             <article key={demo.id} className={`v1-demo-card v1-demo-card-${index + 1}`}>
               <DemoPreview demo={demo} />
               <div className="v1-demo-card-copy">
@@ -96,7 +77,6 @@ export function WebDemosV1() {
             </article>
           ))}
         </div>
-        <DemoDirectory demos={demos} className="v1-demo-directory" />
         <CatalogLink className="v1-demo-catalog-cta">{ui.catalog}<ArrowRight aria-hidden="true" /></CatalogLink>
       </div>
     </section>
@@ -105,20 +85,18 @@ export function WebDemosV1() {
 
 export function WebDemosV2() {
   const { demos, ui } = useDemoContent()
-  const featured = demos.filter((demo) => demo.featured).slice(0, 4)
   return (
     <section className="v2-web-demos" id="demos" aria-labelledby="v2-web-demos-title">
       <div className="v2-demo-intro"><p>02 / {ui.eyebrow}</p><h2 id="v2-web-demos-title">{ui.title}</h2><div><p>{ui.intro}</p></div></div>
       <CatalogGateway className="v2-demo-gateway" />
       <div className="v2-demo-editorial-grid">
-        {featured.map((demo, index) => (
-          <article key={demo.id} className={index === 0 ? 'is-lead' : ''}>
+        {demos.map((demo, index) => (
+          <article key={demo.id}>
             <DemoPreview demo={demo} />
             <div><span>{String(index + 1).padStart(2, '0')} / {demo.clientType}</span><h3>{demo.title}</h3><p>{demo.description}</p><DemoLink demo={demo}>{ui.visit}<ArrowUpRight aria-hidden="true" /></DemoLink></div>
           </article>
         ))}
       </div>
-      <DemoDirectory demos={demos} className="v2-demo-directory" />
     </section>
   )
 }
@@ -144,21 +122,17 @@ export function WebDemosV3() {
 
 export function WebDemosV4() {
   const { demos, ui } = useDemoContent()
-  const featured = demos.filter((demo) => demo.featured)
   return (
     <section className="v4-web-demos" id="demos" aria-labelledby="v4-web-demos-title">
       <div className="v4-heading"><span>02</span><div><p>{ui.eyebrow}</p><h2 id="v4-web-demos-title">{ui.title}</h2></div></div>
       <div className="v4-demo-intro"><p>{ui.intro}</p></div>
       <CatalogGateway className="v4-demo-gateway" />
       <div className="v4-demo-bento">
-        {featured.map((demo, index) => (
+        {demos.map((demo, index) => (
           <article key={demo.id} className={`v4-demo-card v4-demo-card-${index + 1}`} style={{ '--demo-accent': demo.accent, '--demo-soft': demo.soft }}>
             <DemoPreview demo={demo} /><div><span>{demo.clientType}</span><h3>{demo.title}</h3><p>{demo.description}</p><DemoLink demo={demo}>{ui.visit}<ArrowUpRight aria-hidden="true" /></DemoLink></div>
           </article>
         ))}
-      </div>
-      <div className="v4-demo-index">
-        {demos.map((demo) => <DemoLink demo={demo} key={demo.id}><span>{demo.brand}</span><small>{demo.format}</small><ArrowUpRight aria-hidden="true" /></DemoLink>)}
       </div>
     </section>
   )
