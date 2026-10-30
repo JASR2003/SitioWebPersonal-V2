@@ -8,6 +8,7 @@ import {
   SkillsEnhanced,
 } from './components/V1Sections';
 import { VersionGallery } from './components/VersionExplorer';
+import { WebDemosV1 } from './components/WebDemos';
 import { useLanguage } from './i18n/language-context';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <main id="contenido">
         <HeroEnhanced />
         <ProjectsEnhanced />
+        <WebDemosV1 />
         <ExperienceEnhanced />
         <SkillsEnhanced />
         <EducationEnhanced />

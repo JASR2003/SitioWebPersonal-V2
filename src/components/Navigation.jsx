@@ -10,7 +10,7 @@ export function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { copy } = useLanguage();
 
-    const navLinks = ['#inicio', '#proyectos', '#experiencia', '#conocimientos', '#estudios', '#contacto']
+    const navLinks = ['#inicio', '#proyectos', '#web-demos', '#experiencia', '#conocimientos', '#estudios', '#contacto']
         .map((href, index) => ({ name: copy.v1.nav[index], href }));
 
     const scrollToSection = (href) => {

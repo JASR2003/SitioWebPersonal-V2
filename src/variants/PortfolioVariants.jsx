@@ -13,6 +13,7 @@ import {
 import profilePhoto from '../assets/JorgeSuarez.jpg'
 import { MobileSectionMenu, VersionGallery, VersionMenu } from '../components/VersionExplorer'
 import { MonixSpotlight } from '../components/MonixSpotlight'
+import { WebDemosV2, WebDemosV3, WebDemosV4, WebDemosV5 } from '../components/WebDemos'
 import { socialLinks } from '../data/portfolio'
 import { LanguageSwitcher } from '../i18n/LanguageSwitcher'
 import { useLanguage } from '../i18n/language-context'
@@ -66,11 +67,13 @@ export function PortfolioV2() {
         </a>
         <nav className="variant-nav" aria-label={copy.shared.navigation}>
           <a href="#trabajo">{ui.nav[0]}</a>
-          <a href="#trayectoria">{ui.nav[1]}</a>
-          <a href="#perfil">{ui.nav[2]}</a>
+          <a href="#demos">{ui.nav[1]}</a>
+          <a href="#trayectoria">{ui.nav[2]}</a>
+          <a href="#perfil">{ui.nav[3]}</a>
           <a className="v2-nav-cta" href="#contacto">{ui.talk}</a>
           <MobileSectionMenu links={[
             { label: copy.shared.mobileLinks.projects, href: '#trabajo' },
+            { label: copy.shared.mobileLinks.webDemos, href: '#demos' },
             { label: copy.shared.mobileLinks.experience, href: '#trayectoria' },
             { label: copy.shared.mobileLinks.skills, href: '#perfil' },
             { label: copy.shared.mobileLinks.contact, href: '#contacto' },
@@ -145,6 +148,8 @@ export function PortfolioV2() {
           </details>
         </section>
 
+        <WebDemosV2 />
+
         <section className="v2-experience" id="trayectoria">
           <div className="v2-section-heading v2-section-heading-light">
             <p>{ui.experienceEyebrow}</p>
@@ -213,11 +218,13 @@ export function PortfolioV3() {
           <nav className="variant-nav" aria-label={copy.shared.navigation}>
             <a href="#inicio"><span>01</span> {ui.paths[0]}</a>
             <a href="#proyectos"><span>02</span> {ui.paths[1]}</a>
-            <a href="#experiencia"><span>03</span> {ui.paths[2]}</a>
-            <a href="#stack"><span>04</span> {ui.paths[3]}</a>
-            <a href="#contacto"><span>05</span> {ui.paths[4]}</a>
+            <a href="#demos"><span>03</span> {ui.paths[2]}</a>
+            <a href="#experiencia"><span>04</span> {ui.paths[3]}</a>
+            <a href="#stack"><span>05</span> {ui.paths[4]}</a>
+            <a href="#contacto"><span>06</span> {ui.paths[5]}</a>
             <MobileSectionMenu links={[
               { label: copy.shared.mobileLinks.projects, href: '#proyectos' },
+              { label: copy.shared.mobileLinks.webDemos, href: '#demos' },
               { label: copy.shared.mobileLinks.experience, href: '#experiencia' },
               { label: copy.shared.mobileLinks.skills, href: '#stack' },
               { label: copy.shared.mobileLinks.contact, href: '#contacto' },
@@ -276,6 +283,8 @@ export function PortfolioV3() {
               ))}
             </div>
           </section>
+
+          <WebDemosV3 />
 
           <section className="v3-history" id="experiencia">
             <div className="v3-section-title">
@@ -344,10 +353,12 @@ export function PortfolioV4() {
         <a href="#inicio" className="v4-brand">Jorge<span>Suárez</span></a>
         <nav className="variant-nav" aria-label={copy.shared.navigation}>
           <a href="#proyectos">{ui.nav[0]}</a>
-          <a href="#experiencia">{ui.nav[1]}</a>
-          <a href="#conocimientos">{ui.nav[2]}</a>
+          <a href="#demos">{ui.nav[1]}</a>
+          <a href="#experiencia">{ui.nav[2]}</a>
+          <a href="#conocimientos">{ui.nav[3]}</a>
           <MobileSectionMenu links={[
             { label: copy.shared.mobileLinks.projects, href: '#proyectos' },
+            { label: copy.shared.mobileLinks.webDemos, href: '#demos' },
             { label: copy.shared.mobileLinks.experience, href: '#experiencia' },
             { label: copy.shared.mobileLinks.skills, href: '#conocimientos' },
             { label: copy.shared.mobileLinks.contact, href: '#contacto' },
@@ -411,9 +422,11 @@ export function PortfolioV4() {
           </div>
         </section>
 
+        <WebDemosV4 />
+
         <section className="v4-experience" id="experiencia">
           <div className="v4-heading">
-            <span>02</span><div><p>{ui.journey}</p><h2>{ui.journeyTitle}</h2></div>
+            <span>03</span><div><p>{ui.journey}</p><h2>{ui.journeyTitle}</h2></div>
           </div>
           <div className="v4-timeline">
             {experiences.map((experience) => (
@@ -432,7 +445,7 @@ export function PortfolioV4() {
 
         <section className="v4-skills" id="conocimientos">
           <div className="v4-heading">
-            <span>03</span><div><p>{ui.toolkit}</p><h2>{ui.toolkitTitle}</h2></div>
+            <span>04</span><div><p>{ui.toolkit}</p><h2>{ui.toolkitTitle}</h2></div>
           </div>
           <div className="v4-skills-layout">
             <div className="v4-skill-intro">
@@ -474,10 +487,12 @@ export function PortfolioV5() {
         <p>{ui.developer}<br />& WORDPRESS</p>
         <nav className="variant-nav" aria-label={copy.shared.navigation}>
           <a href="#trabajo">{ui.nav[0]}</a>
-          <a href="#experiencia">{ui.nav[1]}</a>
-          <a href="#contacto">{ui.nav[2]}</a>
+          <a href="#demos">{ui.nav[1]}</a>
+          <a href="#experiencia">{ui.nav[2]}</a>
+          <a href="#contacto">{ui.nav[3]}</a>
           <MobileSectionMenu links={[
             { label: copy.shared.mobileLinks.projects, href: '#trabajo' },
+            { label: copy.shared.mobileLinks.webDemos, href: '#demos' },
             { label: copy.shared.mobileLinks.experience, href: '#experiencia' },
             { label: copy.shared.mobileLinks.skills, href: '#conocimientos' },
             { label: copy.shared.mobileLinks.contact, href: '#contacto' },
@@ -525,8 +540,10 @@ export function PortfolioV5() {
           </div>
         </section>
 
+        <WebDemosV5 />
+
         <section className="v5-experience" id="experiencia">
-          <div className="v5-title-row v5-title-row-dark"><span>03</span><h2>{ui.realExperience[0]}<br />{ui.realExperience[1]}</h2><p>{ui.experienceDescription}</p></div>
+          <div className="v5-title-row v5-title-row-dark"><span>04</span><h2>{ui.realExperience[0]}<br />{ui.realExperience[1]}</h2><p>{ui.experienceDescription}</p></div>
           <div className="v5-experience-list">
             {experiences.map((experience, index) => (
               <article key={experience.company}>
@@ -540,7 +557,7 @@ export function PortfolioV5() {
         </section>
 
         <section className="v5-capabilities" id="conocimientos">
-          <div className="v5-title-row"><span>04</span><h2>{ui.capabilities}</h2><p>{ui.learning(education.certificateCount)}</p></div>
+          <div className="v5-title-row"><span>05</span><h2>{ui.capabilities}</h2><p>{ui.learning(education.certificateCount)}</p></div>
           <div className="v5-capability-grid">
             {skills.map((skill) => <div key={skill.name}><strong>{skill.name}</strong><span>{skill.level}</span><p>{skill.detail}</p></div>)}
           </div>
@@ -549,7 +566,7 @@ export function PortfolioV5() {
       </main>
 
       <footer className="v5-footer" id="contacto">
-        <div className="v5-footer-top"><span>05</span><p>{ui.available[0]}<br />{ui.available[1]}</p></div>
+        <div className="v5-footer-top"><span>06</span><p>{ui.available[0]}<br />{ui.available[1]}</p></div>
         <h2>{ui.talk}<span>↗</span></h2>
         <div className="v5-contact-grid">
           <p>{profile.shortIntro}</p>
